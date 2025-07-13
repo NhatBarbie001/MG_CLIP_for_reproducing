@@ -37,10 +37,10 @@ freeze_A: False
 all_test: False
 
 
-visual_agent: true
-visual_agent_lr: 0.0005
-visual_agent_batch_size: 64
-visual_agent_epochs: 3
+visual_clsf: true
+visual_clsf_lr: 0.0005
+visual_clsf_batch_size: 64
+visual_clsf_epochs: 3
 
 
 
