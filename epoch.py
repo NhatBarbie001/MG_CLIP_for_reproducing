@@ -83,11 +83,11 @@ def run_class_incremental(cfg, device):
     )
     # pdb.set_trace()
     model.classes_names = classes_names
-    if cfg.visual_agent:
+    if cfg.visual_clsf:
         if cfg.model_name == "ViT-L/14":
-            vision_agent = VisionClassifier(768, cfg.increment, activation=None)
+            vision_clsf = VisionClassifier(768, cfg.increment, activation=None)
         else:
-            vision_agent = VisionClassifier(512, cfg.increment, activation=None)
+            vision_clsf = VisionClassifier(512, cfg.increment, activation=None)
     
 
     acc_list = []
