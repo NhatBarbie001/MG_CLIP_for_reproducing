@@ -74,7 +74,7 @@ Our method implementation is based on the [Continual-CLIP](https://github.com/vg
 If you find our repo useful for your research, please consider citing our paper:
 
 ```bibtex
-@misc{huang2025mindgappreservingcompensating,
+@misc{huang2025MGCLIP,
       title={Mind the Gap: Preserving and Compensating for the Modality Gap in CLIP-Based Continual Learning}, 
       author={Linlan Huang and Xusheng Cao and Haori Lu and Yifan Meng and Fei Yang and Xialei Liu},
       year={2025},
