@@ -223,6 +223,10 @@ def get_dataset(cfg, is_train, transforms=None):
     else:
         ValueError(f"'{cfg.dataset}' is a invalid dataset.")
 
+    if(dataset is None):
+        ValueError(f"'{cfg.dataset}' is a invalid dataset.")
+    if(classes_names is None):
+        ValueError(f"'{cfg.dataset}' is a invalid dataset.")
     return dataset, classes_names
 
 
