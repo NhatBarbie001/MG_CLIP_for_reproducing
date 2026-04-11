@@ -116,6 +116,7 @@ class VTAB(ImageFolderDataset):
 
 
 def get_dataset(cfg, is_train, transforms=None):
+    dataset = None
     if cfg.dataset == "cifar100":
         data_path = cfg.dataset_root
         dataset = CIFAR100(
