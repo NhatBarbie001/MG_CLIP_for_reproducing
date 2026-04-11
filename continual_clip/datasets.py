@@ -117,6 +117,7 @@ class VTAB(ImageFolderDataset):
 
 def get_dataset(cfg, is_train, transforms=None):
     dataset = None
+    classes_names = None
     if cfg.dataset == "cifar100":
         data_path = cfg.dataset_root
         dataset = CIFAR100(
@@ -194,6 +195,9 @@ def get_dataset(cfg, is_train, transforms=None):
             data_subset=os.path.join(get_workdir(os.getcwd()), "class_orders/train_100.txt" if is_train else "class_orders/val_100.txt")
         )
         classes_names = get_dataset_class_names(cfg.workdir, cfg.dataset)
+        print("Total classes:", len(classes_names))
+        for i, c in enumerate(classes_names):
+            print(i, c)
 
     elif cfg.dataset == "imagenet1000":
         data_path = cfg.dataset_root
