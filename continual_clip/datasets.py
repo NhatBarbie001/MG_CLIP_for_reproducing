@@ -235,6 +235,10 @@ def build_cl_scenarios(cfg, is_train, transforms) -> nn.Module:
     dataset, classes_names = get_dataset(cfg, is_train)
 
     if cfg.scenario == "class":
+        if dataset is None:
+            ValueError(f"'{cfg.dataset}' is a invalid dataset.")
+        if classes_names is None:
+            ValueError(f"'{cfg.dataset}' is a invalid dataset.")
         scenario = ClassIncremental(
             dataset,
             initial_increment=cfg.initial_increment,
