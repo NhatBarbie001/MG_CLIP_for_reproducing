@@ -11,7 +11,10 @@ hydra:
         format: '%(message)s'
 
 class_order: ""
-dataset_root: ""
+dataset_root: "/kaggle/working/imagenet100"
+sub_train_path: "dataset_reqs/imagenet100_splits/train_100.txt"
+sub_val_path: "dataset_reqs/imagenet100_splits/val_100.txt"
+
 workdir: ""
 log_path: "metrics.json"
 model_name: "ViT-B/16"

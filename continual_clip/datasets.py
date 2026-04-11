@@ -192,7 +192,7 @@ def get_dataset(cfg, is_train, transforms=None):
         dataset = ImageNet100(
             data_path, 
             train=is_train,
-            data_subset=os.path.join(get_workdir(os.getcwd()), "class_orders/train_100.txt" if is_train else "class_orders/val_100.txt")
+            data_subset=os.path.join(get_workdir(os.getcwd()), cfg.sub_train_path if is_train else cfg.sub_val_path)
         )
         classes_names = get_dataset_class_names(cfg.workdir, cfg.dataset)
         print("Total classes:", len(classes_names))
